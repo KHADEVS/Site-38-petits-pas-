@@ -1,0 +1,386 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8faf5 0%, #fff7f2 100%);
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-padding-top: 110px;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 100%;
+  backdrop-filter: blur(8px);
+}
+
+.header-content {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px 10px 60px;
+  gap: 40px;
+}
+
+.logo {
+  height: 70px;
+  margin-right: 40px;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #6bbf3d;
+}
+
+.contact-btn {
+  background: #6bbf3d;
+  color: #fff !important;
+  padding: 7px 28px;
+  border-radius: 20px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 2px 8px rgba(107,191,61,0.10);
+  transition: background 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  background: #4e8c2a;
+}
+
+.contact-card a[href^="mailto"], 
+.contact-card a[href^="tel"] {
+  color: #6bbf3d;
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-card a[href^="mailto"]:hover, 
+.contact-card a[href^="tel"]:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1800px;
+  margin: 40px auto 0 auto;
+  padding: 0 60px;
+}
+
+section {
+  margin-bottom: 80px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  padding: 50px 0;
+  width: 100%;
+  border: 2px solid #fff;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  padding: 50px 0 50px 0;
+  border: 2px solid #fff;
+}
+
+.highlight {
+  color: #6bbf3d;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #888;
+  margin-bottom: 18px;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #6bbf3d;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(107,191,61,0.10);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #4e8c2a;
+}
+
+h2 {
+  color: #222;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.missions-intro {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #6d6d6d;
+  margin-bottom: 40px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Missions grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  justify-content: center;
+  margin: 40px 0 20px 0;
+}
+
+.grid-3 .card {
+  margin: 0 32px 32px 32px;
+}
+
+/* Valeurs grid : 2 par ligne, dernière carte centrée et agrandie, padding pour écarter des bords */
+.valeurs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  justify-content: center;
+  margin: 40px 0 20px 0;
+  padding: 0 60px;
+}
+
+.valeurs-grid .card:last-child {
+  grid-column: 1 / span 2;
+  width: 100%;
+  font-size: 1.15rem;
+}
+
+/* Autres grilles */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-content: center;
+  margin: 40px 0 20px 0;
+}
+
+.card,
+.admission-card,
+.contact-card,
+.equipe-partenaire {
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  padding: 38px 32px;
+  min-height: 120px;
+  text-align: left;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  color: #6bbf3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.18rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.card-desc {
+  color: #666;
+  font-size: 1.05rem;
+}
+
+.valeur-vert .card-title, .valeur-vert .card-desc { color: #6bbf3d; }
+.valeur-orange .card-title, .valeur-orange .card-desc { color: #ff9800; }
+
+.equipe-partenaire {
+  background: #f3fbe9;
+  color: #4e8c2a;
+  border: 2px solid #fff;
+  margin-top: 18px;
+  border-radius: 12px;
+  padding: 18px 22px;
+  font-size: 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+}
+
+.wide-partenaire {
+  max-width: 1400px;
+  margin: 28px auto 0 auto;
+}
+
+.admission-card {
+  width: 80%;
+  margin: 0 auto 32px auto;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.wide-admission {
+  max-width: 1200px;
+}
+
+.contact-card {
+  width: 500px;
+  margin: 0 auto 32px auto;
+  text-align: left;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+}
+
+.wide-contact {
+  max-width: 700px;
+}
+
+footer {
+  background: #f8faf5;
+  text-align: center;
+  padding: 18px 0;
+  color: #888;
+  font-size: 1rem;
+  margin-top: 40px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 1600px) {
+  main, .header-content {
+    max-width: 1400px;
+    padding: 0 20px;
+  }
+  .grid-3 {
+    gap: 40px;
+  }
+  .valeurs-grid {
+    gap: 24px;
+    padding: 0 30px;
+  }
+  .grid-3 .card {
+    margin: 0 16px 32px 16px;
+  }
+}
+@media (max-width: 1200px) {
+  main, .header-content {
+    max-width: 98vw;
+    padding: 0 10px;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .valeurs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .grid-3 .card {
+    margin: 0 8px 32px 8px;
+  }
+  .valeurs-grid .card:last-child {
+    grid-column: auto;
+    width: 100%;
+    font-size: 1.15rem;
+  }
+}
+@media (max-width: 900px) {
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px 10px;
+  }
+  nav {
+    justify-content: center;
+    width: 100%;
+  }
+  .logo {
+    margin: 0 auto 12px auto;
+  }
+  nav ul {
+    gap: 24px;
+  }
+  .contact-btn {
+    margin-top: 12px;
+    align-self: flex-end;
+  }
+  .grid-3, .valeurs-grid, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  section {
+    padding: 18px 0;
+  }
+  .admission-card, .contact-card {
+    width: 95%;
+  }
+  .grid-3 .card {
+    margin: 0 0 32px 0;
+  }
+  .valeurs-grid {
+    padding: 0 2vw;
+  }
+  .valeurs-grid .card:last-child {
+    grid-column: auto;
+    width: 100%;
+   font-size: 1.15rem;
+  }
+}
